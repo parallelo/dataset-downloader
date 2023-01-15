@@ -112,6 +112,8 @@ func getDataDir() string {
 func main() {
 	dataDir := getDataDir()
 
+	log.Println("grabbed --data_dir value: ", dataDir)
+
 	wg := new(sync.WaitGroup)
 
 	// Each list page only shows `bookListSize` books so scrape each one in parallel
